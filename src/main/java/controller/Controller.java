@@ -31,6 +31,8 @@ public class Controller extends HttpServlet {
 				MessagesDAO dao = MessagesDAO.getInstance();
 				
 				List<DTO> list = dao.selectAll();
+				request.setAttribute("list", list);
+				
 				request.getRequestDispatcher("/outputForm.jsp").forward(request, response);
 				
 			}
