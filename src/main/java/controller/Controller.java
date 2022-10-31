@@ -25,7 +25,7 @@ public class Controller extends HttpServlet {
 				String msg = request.getParameter("msg");
 				
 				int result = MessagesDAO.getInstance().insert(name, msg);
-				response.sendRedirect("/indext.jsp");
+				response.sendRedirect("/index.jsp");
 				
 			}else if(uri.equals("/outputForm.git")) {
 				MessagesDAO dao = MessagesDAO.getInstance();
